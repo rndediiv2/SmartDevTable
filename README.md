@@ -44,7 +44,6 @@ This will copy file into directory below :
 and include this file on your body html
 
 ```
-<body>
 ----
 Your html content
 ----
