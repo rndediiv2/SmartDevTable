@@ -1,0 +1,23 @@
+{
+    "name": "rndediiv2/smart-dev-table",
+    "description": "A php native class pagination with laravel, bootstrap",
+    "keywords": ["laravel", "pagination"],
+    "type": "library",
+    "require": {
+        "illuminate/support": "5.3.x|5.4.x|5.5.x|5.6.x"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "rndediiv2",
+            "email": "rnd.ediindonesia@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "rndediiv2\\SmartDevTable\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
