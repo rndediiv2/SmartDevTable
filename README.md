@@ -58,9 +58,11 @@ Your html content
 </body>
 ```
 We also use third-party js : 
-* [alertifyjs](https://alertifyjs.org/) - Simple browser dialogs. 
-So, you must download above alelrify.js and put your code before ```<script type="text/javascript" src="{{ asset('/js/SmartDevTable.js') }}"></script>```
+* [alertifyjs](https://alertifyjs.org/) - Simple browser dialogs.
 
+```
+<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+```
 
 ### Usage
 In your controller, put your code like this 
