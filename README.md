@@ -30,13 +30,18 @@ To get started, you'll need to publish all vendor assets:
 ```
 $ php artisan vendor:publish
 ```
-This will create a css file in ```public/css/SmartDevTable.css```, and include this file on your body html 
-This will create a js file in ```public/js/SmartDevTable.js```, and include this file on your body html 
-This will copy a css file in ```public/js/bootstrap-dialog.min.css```, and include this file on your body html
-This will copy a js file in ```public/js/bootstrap-dialog.min.js```, and include this file on your body html 
-This will copy a css file in ```public/js/bootstrap-material-datetimepicker.css```, and include this file on your body html  
-This will copy a js file in ```public/js/bootstrap-material-datetimepicker.js```, and include this file on your body html 
 
+This will copy file into directory below :
+
+```
+- public/css/SmartDevTable.css
+- public/js/SmartDevTable.js
+- public/js/bootstrap-dialog.min.css
+- public/js/bootstrap-dialog.min.js
+- public/js/bootstrap-material-datetimepicker.css
+- public/js/bootstrap-material-datetimepicker.js 
+```
+and include this file on your body html
 
 ```
 <body>
