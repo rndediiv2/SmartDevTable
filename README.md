@@ -1,5 +1,5 @@
 # SmartDevTable
-A native class pagination with Laravel and Bootstrap, [Bootstrap3 Dialog](https://github.com/nakupanda/bootstrap3-dialog), [Bootstrap Material Datepicker](https://github.com/T00rk/bootstrap-material-datetimepicker)
+A native class pagination with [Laravel](https://github.com/laravel/laravel), [Bootstrap](https://getbootstrap.com), [Bootstrap3 Dialog](https://github.com/nakupanda/bootstrap3-dialog) and [Bootstrap Material Datepicker](https://github.com/T00rk/bootstrap-material-datetimepicker)
 
 ## About
 Currently this package is only used for the purposes of our internal development
