@@ -36,9 +36,9 @@ This will copy file into directory below :
 ```
 - public/css/SmartDevTable.css
 - public/js/SmartDevTable.js
-- public/js/bootstrap-dialog.min.css
+- public/css/bootstrap-dialog.min.css
 - public/js/bootstrap-dialog.min.js
-- public/js/bootstrap-material-datetimepicker.css
+- public/css/bootstrap-material-datetimepicker.css
 - public/js/bootstrap-material-datetimepicker.js 
 ```
 and include this file on your body html
