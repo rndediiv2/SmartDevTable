@@ -51,7 +51,7 @@ class SmartDevTable
     protected $callBack             = "";
     protected $filedCallBack        = "";
     protected $divAppend            = FALSE;
-    protected $bootstrapComponent   = [];
+    protected $iconCustoms          = [];
 
     
     public function __constructor()
@@ -259,14 +259,16 @@ class SmartDevTable
         return;
     }
 
-    public function bootstrapComponent($component)
+    public function iconCustoms($iconCustoms)
     {
-        if(!is_array($component))
+        if(is_array($iconCustoms))
         {
-            return FALSE;
+            foreach($iconCustoms as $val => $key)
+            {
+                $this->iconCustoms[$val] = $key;
+            }
         }
-        $this->bootstrapComponent = $component;
-        return;
+        return $this->iconCustoms;
     }
 
     public function setTemplate($template)
@@ -598,6 +600,7 @@ class SmartDevTable
         
         #Start print table component
         $out  = '<div class="section" style="width: 98%; margin: 0px auto;">';
+        $out .= '<div class="smartDev-overlay"><div class="smartDev-overlay-content"></div></div>';
         $out .= '   <form id="'. $this->tbTarget.'" action="'. $this->action.'" autocomplete="off">';
 
         #Condition for type searching, single keyword or multiple keywords searching
@@ -838,17 +841,17 @@ class SmartDevTable
                             {
                                 if ($this->sortBy == "ASC")
                                 {
-                                    $out .= "<span title=\"Sort By ".$heading." (Z-A)\" orderby=\"$z\" sortby=\"DESC\"".($this->postMethod || $request->input('data-post') ? " data-post = \"TRUE\" data-form = \"#".$this->tbTarget."\" data-action = \"".$this->action."\" data-target = \".".$this->tbTarget."\" id =\"orderby\" onclick=\"order($(this));\"" : "").">$heading</span>";
+                                    $out .= "<span title=\"Sort By ".$heading." (Z-A)\" orderby=\"$z\" sortby=\"DESC\"".($this->postMethod || $request->input('data-post') ? " data-post = \"TRUE\" data-form = \"#".$this->tbTarget."\" data-screen-loader=\"#screen_".$this->tbTarget."\" data-action = \"".$this->action."\" data-target = \".".$this->tbTarget."\" id =\"orderby\" onclick=\"order($(this));\"" : "").">$heading</span>";
                                 }
                                 else
                                 {
-                                    $out .= "<span title=\"Sort By ".$heading." (Z-A)\" orderby=\"$z\" sortby=\"ASC\"".($this->postMethod || $request->input('data-post') ? " data-post = \"TRUE\" data-form = \"#".$this->tbTarget."\" data-action = \"".$this->action."\" data-target = \".".$this->tbTarget."\" id =\"orderby\" onclick=\"order($(this));\"" : "")."\>$heading</span>";
+                                    $out .= "<span title=\"Sort By ".$heading." (Z-A)\" orderby=\"$z\" sortby=\"ASC\"".($this->postMethod || $request->input('data-post') ? " data-post = \"TRUE\" data-form = \"#".$this->tbTarget."\" data-screen-loader=\"#screen_".$this->tbTarget."\" data-action = \"".$this->action."\" data-target = \".".$this->tbTarget."\" id =\"orderby\" onclick=\"order($(this));\"" : "")."\>$heading</span>";
                                 }
                             }
                             else
                             {
                                 if($z > 0)
-                                    $out .= "<span title=\"Sort By ".$heading." (Z-A)\" orderby=\"$z\" sortby=\"ASC\"".($this->postMethod || $request->input('data-post') ? " data-post = \"TRUE\" data-form = \"#".$this->tbTarget."\" data-action = \"".$this->action."\" data-target = \".".$this->tbTarget."\" id =\"orderby\" onclick=\"order($(this));\"" : "").">$heading</span>";
+                                    $out .= "<span title=\"Sort By ".$heading." (Z-A)\" orderby=\"$z\" sortby=\"ASC\"".($this->postMethod || $request->input('data-post') ? " data-post = \"TRUE\" data-form = \"#".$this->tbTarget."\" data-screen-loader=\"#screen_".$this->tbTarget."\" data-action = \"".$this->action."\" data-target = \".".$this->tbTarget."\" id =\"orderby\" onclick=\"order($(this));\"" : "").">$heading</span>";
                                 else
                                     $out .= $heading;
                             }
@@ -1150,7 +1153,7 @@ class SmartDevTable
                         <div class="colSmartDev-lg-12 colSmartDev-md-12 colSmartDev-sm-12 colSmartDev-xs-12">
                             <div class="panel-top-action" id="panel-top-action_'. $this->tbTarget .'">
                             <div class="action-left">
-                                <a href="javascript:void(0)" onclick="_hideBottom($(this));" id="'.rand().'" class="btnSmartDev btnSmartDev-outline-primary" title="Back or Close" data-body = ".'.$this->tbTarget.'" data-bar="#panel-top-action_'.$this->tbTarget.'" style="margin-right: 30px;"><i class="os-icon os-icon-cancel-circle"></i></a> &nbsp;';
+                                <a href="javascript:void(0)" onclick="_hideBottom($(this));" id="'.rand().'" class="btnSmartDev btnSmartDev-outline-primary" title="Back or Close" data-body = ".'.$this->tbTarget.'" data-bar="#panel-top-action_'.$this->tbTarget.'" style="margin-right: 30px; margin-left: 5px;"><i class="'. $this->iconCustoms['panel-top-close'] .'"></i></a> &nbsp;';
             if(count($this->proses) > 0 && $this->showChk)
             {
                 foreach($this->proses as $a => $b)
