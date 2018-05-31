@@ -1,5 +1,5 @@
 # SmartDevTable
-A native class pagination with Laravel and Bootstrap
+A native class pagination with [Laravel](https://github.com/laravel/laravel), [Bootstrap](https://getbootstrap.com), [Bootstrap3 Dialog](https://github.com/nakupanda/bootstrap3-dialog) and [Bootstrap Material Datepicker](https://github.com/T00rk/bootstrap-material-datetimepicker)
 
 ## About
 Currently this package is only used for the purposes of our internal development
@@ -30,19 +30,24 @@ To get started, you'll need to publish all vendor assets:
 ```
 $ php artisan vendor:publish
 ```
-This will create a css file in ```public/css/SmartDevTable.css```, and include this file on your body html 
-This will create a js file in ```public/js/SmartDevTable.js```, and include this file on your body html 
-This will copy a css file in ```public/js/bootstrap-dialog.min.css```, and include this file on your body html
-This will copy a js file in ```public/js/bootstrap-dialog.min.js```, and include this file on your body html 
-This will copy a css file in ```public/js/bootstrap-material-datetimepicker.css```, and include this file on your body html  
-This will copy a js file in ```public/js/bootstrap-material-datetimepicker.js```, and include this file on your body html 
 
+This will copy file into directory below :
 
 ```
-<body>
+- public/css/SmartDevTable.css
+- public/js/SmartDevTable.js
+- public/css/bootstrap-dialog.min.css
+- public/js/bootstrap-dialog.min.js
+- public/css/bootstrap-material-datetimepicker.css
+- public/js/bootstrap-material-datetimepicker.js 
+```
+and include this file on your body html
+
+```
 ----
 Your html content
 ----
+<link rel="stylesheet" href="{{ URL::asset('css/bootstrap-dialog.min.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-material-datetimepicker.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/SmartDevTable.css') }}" />
 <body>
@@ -53,9 +58,11 @@ Your html content
 </body>
 ```
 We also use third-party js : 
-* [alertifyjs](https://alertifyjs.org/) - Simple browser dialogs. 
-So, you must download above alelrify.js and put your code before ```<script type="text/javascript" src="{{ asset('/js/SmartDevTable.js') }}"></script>```
+* [alertifyjs](https://alertifyjs.org/) - Simple browser dialogs.
 
+```
+<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+```
 
 ### Usage
 In your controller, put your code like this 
