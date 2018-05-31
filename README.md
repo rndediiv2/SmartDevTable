@@ -1,5 +1,5 @@
 # SmartDevTable
-A native class pagination with [Laravel](https://github.com/laravel/laravel), [Bootstrap](https://getbootstrap.com), [Bootstrap3 Dialog](https://github.com/nakupanda/bootstrap3-dialog) and [Bootstrap Material Datepicker](https://github.com/T00rk/bootstrap-material-datetimepicker)
+A native class pagination with [Laravel](https://github.com/laravel/laravel), [Bootstrap](https://getbootstrap.com), [Bootstrap3 Dialog](https://github.com/nakupanda/bootstrap3-dialog), [Bootstrap Material Datepicker](https://github.com/T00rk/bootstrap-material-datetimepicker) and [alertifyjs](https://alertifyjs.org/)
 
 ## About
 Currently this package is only used for the purposes of our internal development
@@ -64,12 +64,6 @@ Your html content
 <script type="text/javascript" src="{{ URL::asset('/js/bootstrap-material-datetimepicker.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('/js/SmartDevTable.js') }}"></script>
 </body>
-```
-We also use third-party js : 
-* [alertifyjs](https://alertifyjs.org/) - Simple browser dialogs.
-
-```
-<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
 ```
 
 ### Usage
