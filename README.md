@@ -40,6 +40,8 @@ This will copy file into directory below :
 - public/js/bootstrap-dialog.min.js
 - public/css/bootstrap-material-datetimepicker.css
 - public/js/bootstrap-material-datetimepicker.js 
+- public/js/moment.js
+
 ```
 and include this file on your body html
 
@@ -47,11 +49,17 @@ and include this file on your body html
 ----
 Your html content
 ----
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-dialog.min.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-material-datetimepicker.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/SmartDevTable.css') }}" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
-
+{!! $smartTable; !!}
+<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+<script type="text/javascript" src="{{ URL::asset('/js/moment.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('/js/bootstrap-dialog.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('/js/bootstrap-material-datetimepicker.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('/js/SmartDevTable.js') }}"></script>
