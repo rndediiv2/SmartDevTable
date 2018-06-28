@@ -778,7 +778,7 @@ class SmartDevTable
             if(count($arrSubHome)>0){
                 $out .=     '<span class="button-new-fixed">';
                 foreach ($arrSubHome as $a => $b){
-                    $out .= '<a href="javascript:void(0);" onclick="submenuHome($(this)); return false;" id = "'.rand().'new" act="'.$b[1].'" title="'.$a.'" '.($b[5]=="append" ? "data-append=\"true\" data-div=\"#newdiv\" data-class = \".formsearch"   : "").' '.($b[5]=="modal" ? "data-modal=\"true" : "").' ><i class="'. $b[4] .'"></i></a></span>';
+                    $out .= '<a href="javascript:void(0);" onclick="submenuHome($(this)); return false;" id = "'.rand().'new" act="'.$b[1].'" value="'.$a.'" '.($b[5]=="append" ? "data-append=\"true\" data-div=\"#newdiv\" data-class = \".formsearch"   : "").' '.($b[5]=="modal" ? "data-modal=\"true" : "").'"><i class="'. $b[4].'"></i></a>';
 
                 }
                 $out .= '</span>';
