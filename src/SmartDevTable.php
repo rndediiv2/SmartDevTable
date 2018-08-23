@@ -466,9 +466,9 @@ class SmartDevTable
                 $iTotalRecord = 0;
                 $iTotalCount = 0;
                 if(env('DB_CONNECTION') == 'oracle')
-                    $objTableCount = DB::select("SELECT COUNT(*) AS jml FROM ($tableData)");
+                    $objTableCount = DB::select("SELECT COUNT(1) AS jml FROM ($tableData)");
                 else
-                    $objTableCount = DB::select("SELECT COUNT(*) AS jml FROM ($tableData) AS TBL");
+                    $objTableCount = DB::select("SELECT COUNT(1) AS jml FROM ($tableData) AS TBL");
 
                 if(sizeof($objTableCount) > 0)
                 {
